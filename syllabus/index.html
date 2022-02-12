@@ -63,7 +63,7 @@
   <meta name="description" content="" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://bayesopt-tutorial.github.io/categories/" />
+  <link rel="alternate" hreflang="en-us" href="https://bayesopt-tutorial.github.io/syllabus/" />
 
   
   
@@ -268,7 +268,7 @@
   
 
   
-    <link rel="alternate" href="/categories/index.xml" type="application/rss+xml" title="BO tutorial" />
+    <link rel="alternate" href="/syllabus/index.xml" type="application/rss+xml" title="BO tutorial" />
   
 
   
@@ -278,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://bayesopt-tutorial.github.io/categories/" />
+  <link rel="canonical" href="https://bayesopt-tutorial.github.io/syllabus/" />
 
   
   
@@ -301,14 +301,12 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="BO tutorial" />
-  <meta property="og:url" content="https://bayesopt-tutorial.github.io/categories/" />
-  <meta property="og:title" content="Categories | BO tutorial" />
+  <meta property="og:url" content="https://bayesopt-tutorial.github.io/syllabus/" />
+  <meta property="og:title" content="Call for Papers | BO tutorial" />
   <meta property="og:description" content="" /><meta property="og:image" content="https://bayesopt-tutorial.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://bayesopt-tutorial.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2020-12-13T00:00:00&#43;00:00" />
-    
   
 
   
@@ -323,11 +321,11 @@
 
 
 
-  <title>Categories | BO tutorial</title>
+  <title>Call for Papers | BO tutorial</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5538b9800f06ab7b29edaa22ab7e63cb" >
 
   
   
@@ -451,7 +449,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/syllabus"><span>Tutorial Syllabus</span></a>
+            <a class="nav-link  active" href="/syllabus"><span>Tutorial Syllabus</span></a>
           </li>
 
           
@@ -546,7 +544,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>Categories</h1>
+  <h1>Call for Papers</h1>
 
   
 
@@ -557,160 +555,208 @@
 
 <div class="universal-wrapper">
   
-
-  
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/category/demo/" >Demo</a>
-    </div>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Dec 13, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
+    <div class="article-style"><p>Outline of the Tutorial:</p>
+<ol start="0">
+<li>Big Picture of Bayesian Optimization (BO)</li>
+</ol>
+<ul>
+<li>Motivation from real-world applications</li>
+<li>Challenges of optimizing expensive black-box functions</li>
+<li>Overview of Bayesian optimization</li>
+<li>Three key elements: statistical model, acquisition function (AF), and acquisition function optimizer (AFO)</li>
+</ul>
+<ol>
+<li>Foundations of BO</li>
+</ol>
+<ul>
+<li>
+<p>Background on Gaussian Processes (GPs)</p>
+<ul>
+<li>Two views of GPs: weight space and function space</li>
+<li>Learning and inference with GPs</li>
+<li>Scalability challenges and solutions</li>
+</ul>
+</li>
+<li>
+<p>Background on Acquisition Functions (AFs)</p>
+<ul>
+<li>Exploration vs. Exploitation trade-off</li>
+<li>Example AFs: Expected improvement (EI), Upper confidence bound (UCB), Thompson Sampling (TS), and Information-theoretic methods</li>
+<li>Optimizers: DIRECT, gradient-based methods, and evolutionary search</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>BO over Combinatorial Spaces</li>
+</ol>
+<ul>
+<li>
+<p>Motivating Applications</p>
+<ul>
+<li>Manycore systems design</li>
+<li>Biological sequence design</li>
+<li>Drug/Vaccine/Molecule design</li>
+</ul>
+</li>
+<li>
+<p>Key Challenges</p>
+<ul>
+<li>Effective surrogate models for combinatorial structures (e.g., sequences, trees, graphs)</li>
+<li>Trading-off complexity of statistical model and tractability of AFO</li>
+</ul>
+</li>
+<li>
+<p>BO Methods over Original Space</p>
+<ul>
+<li>Simple models and tractable AFO (BOCS)</li>
+<li>Complex models and heuristic search (SMAC, COMBO)</li>
+<li>Complex models and tractable search (MerCBO)</li>
+<li>Complex models and effective search via learning-to-search (L2S-DISCO)</li>
+</ul>
+</li>
+<li>
+<p>BO Methods over Latent Continuous Space</p>
+<ul>
+<li>Advantages of reduction to BO over continuous space</li>
+<li>Deep generative models for learning latent space</li>
+<li>Challenges of BO over latent space: valid structures, high-dimensionality, imperfect decoder</li>
+<li>Recent algorithmic advances: weighted re-training, LADDER, and high-dimensional BO</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>BO over Hybrid Spaces</li>
+</ol>
+<ul>
+<li>
+<p>Motivating Applications</p>
+<ul>
+<li>Material design</li>
+<li>Microbiome design</li>
+<li>Auto ML tasks</li>
+</ul>
+</li>
+<li>
+<p>Key Challenges</p>
+<ul>
+<li>Effective surrogate models for hybrid structures</li>
+<li>Trading-off complexity of statistical model and tractability of AFO</li>
+</ul>
+</li>
+<li>
+<p>BO Methods over Original Space</p>
+<ul>
+<li>Simple models and tractable AFO (MiVaBO)</li>
+<li>Complex models and heuristic search (SMAC, CoCaBO, HyBO, BO-FM)</li>
+</ul>
+</li>
+<li>
+<p>BO Methods over Latent Continuous Space</p>
+<ul>
+<li>GEBO algorithm</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Multi-fidelity BO</li>
+</ol>
+<ul>
+<li>
+<p>Background on Multi-fidelity optimization</p>
+<ul>
+<li>Function approximations (fidelities) with varying cost and accuracy of evaluation</li>
+<li>Discrete fidelity vs. Continuous fidelity</li>
+<li>Example real-world applications (e.g., Auto ML)</li>
+</ul>
+</li>
+<li>
+<p>Key Challenges</p>
+<ul>
+<li>Surrogate modeling of multiple fidelity functions and information sharing</li>
+<li>Selection of input and fidelity pair in each BO iteration</li>
+</ul>
+</li>
+<li>
+<p>BO Algorithms</p>
+<ul>
+<li>Simple methods: multi-fidelity EI, UCB, and BOCA</li>
+<li>Information-theoretic methods: MF-PES, MF-MES</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>Constrained BO</li>
+</ol>
+<ul>
+<li>
+<p>Background on Constrained Optimization</p>
+<ul>
+<li>Valid vs. Invalid inputs via constraints</li>
+<li>Black-box constraints</li>
+<li>Example real-world applications (e.g., design of safe and effective vaccines/drugs)</li>
+</ul>
+</li>
+<li>
+<p>Key Challenges</p>
+<ul>
+<li>Modeling black-box constraints</li>
+<li>Reasoning with learned model over constraints</li>
+</ul>
+</li>
+<li>
+<p>BO Algorithms</p>
+<ul>
+<li>Simple methods: constrained EI</li>
+<li>Information-theoretic methods: c-PES, c-MES</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>Multi-objective BO</li>
+</ol>
+<ul>
+<li>
+<p>Motivating Applications</p>
+<ul>
+<li>Hardware design to trade-off power and performance</li>
+<li>Drug/Vaccine design to trade-off efficacy, safety, and cost</li>
+</ul>
+</li>
+<li>
+<p>Background on Multi-Objective Optimization</p>
+<ul>
+<li>Optimal Pareto set</li>
+<li>Optimal Pareto front</li>
+</ul>
+</li>
+<li>
+<p>BO Algorithms</p>
+<ul>
+<li>Simple methods: expected improvement in Hypervolume, ParEGO, USeMO</li>
+<li>Information-theoretic methods: epsilon-PAL, PESMO, and MESMO</li>
+<li>Differentiable expected hypervolume improvement</li>
+</ul>
+</li>
+<li>
+<p>Multi-Fidelity BO Algorithms</p>
+<ul>
+<li>MF-MESMO and iMOCA</li>
+</ul>
+</li>
+<li>
+<p>Constrained BO Algorithms</p>
+<ul>
+<li>PESMOC, USeMOC, MESMOC, MESMOC+</li>
+</ul>
+</li>
+</ul>
+<ol start="7">
+<li>Outstanding Challenges and Frontiers of BO</li>
+</ol>
 </div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="media stream-item view-compact">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/category/%E6%95%99%E7%A8%8B/" >教程</a>
-    </div>
-
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
   
 
   
-  <span class="article-date">
-    
-    
-      
-    
-    Dec 13, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
   
 
   
