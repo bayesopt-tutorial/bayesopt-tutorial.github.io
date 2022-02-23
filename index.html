@@ -22,7 +22,11 @@
 
 
 
+
   
+
+
+
 
 
 
@@ -68,7 +72,7 @@
   
   
   
-    <meta name="theme-color" content="#1565c0" />
+    <meta name="theme-color" content="#bbdefb" />
   
 
   
@@ -83,8 +87,6 @@
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
-    
 
     
     
@@ -107,16 +109,6 @@
     
     
     
-      
-    
-    
-      
-      
-        
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
-        
-      
     
 
     
@@ -256,7 +248,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.fdeb09e237052632e0ec72f95561ab57.css" />
+  <link rel="stylesheet" href="/css/wowchemy.19a96669ea8db3907ce02c5e3301f8b6.css" />
 
   
 
@@ -264,7 +256,9 @@
 
   
 
+
   
+
 
   
 
@@ -326,13 +320,7 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://bayesopt-tutorial.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "https://bayesopt-tutorial.github.io/"
+  "@type": "WebSite","url": "https://bayesopt-tutorial.github.io/"
 }
 </script>
 
@@ -351,7 +339,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper  dark "  >
 
   
   
@@ -362,47 +350,10 @@
   
   
   
-  <script src="/js/wowchemy-init.min.133800c88f3b5bb934932231fd94fed7.js"></script>
+  <script src="/js/wowchemy-init.min.d333d96014f7bcfa311294a92ace0d60.js"></script>
 
   
 
-
-<aside class="search-modal" id="search">
-  <div class="container">
-    <section class="search-header">
-
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-
-      <div id="search-box">
-        
-        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
-        aria-label="Search...">
-        
-      </div>
-
-      
-      
-
-      
-
-    </section>
-    <section class="section-search-results">
-
-      <div id="search-hits">
-        
-      </div>
-
-    </section>
-  </div>
-</aside>
 
 
 
@@ -475,7 +426,37 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/syllabus"><span>Tutorial Syllabus</span></a>
+            <a class="nav-link " href="/syllabus"><span>Tutorial Syllabus and Slides</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/tutorialspeakers"><span>Speakers</span></a>
           </li>
 
           
@@ -528,11 +509,8 @@
 
         
         
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
 
+        
         
         
 
@@ -550,6 +528,13 @@
 
   <div class="page-body">
     
+    
+    
+
+    
+
+
+  
 
 
 
@@ -739,6 +724,7 @@
   <div class="col-12">
     <p>Many engineering and scientific applications including automated machine learning (e.g., neural architecture search and hyper-parameter tuning) involve making design choices to optimize one or more expensive to evaluate objectives. Some examples include tuning the knobs of a compiler to optimize performance and efficiency of a set of software programs; designing new materials to optimize strength, elasticity, and durability; and designing hardware to optimize performance, power, and area. Bayesian Optimization (BO) is an effective framework to solve black-box optimization problems with expensive function evaluations. The key idea behind BO is to build a cheap surrogate statistical model (e.g., Gaussian Process) using the real experimental data; and employ it to intelligently select the sequence of experiments or function evaluations using an acquisition function, e.g., expected improvement (EI) and upper-confidence bound (UCB).</p>
 <p>There is a large body of work on BO for single-objective optimization in the single-fidelity setting (i.e., experiments are expensive and accurate in function evaluation) for continuous input spaces. However, BO work in recent years has focused on more challenging problem settings including optimization of multiple objectives; optimization with multi-fidelity function evaluations (vary in resource cost and accuracy of evaluation); optimization with black-box constraints with applications to safety; optimization of combinatorial spaces (e.g., sequences, trees, and graphs); and optimization of hybrid spaces (mixture of discrete and continuous input variables. The goal of this tutorial is to present a comprehensive survey of BO starting from foundations to these recent advances by focusing on challenges, principles, algorithmic ideas and their connections, and important real-world applications.</p>
+<p>The tutorial starts at <strong>8:30 AM PST</strong> on 23th February, 2022.</p>
 <!-- Scientists and engineers in diverse application domains are increasingly relying on using computational and artificial intelligence (AI) tools to accelerate scientific discovery and engineering design. AI, machine learning, and reasoning algorithms are useful in building models and decision-making towards this goal. We have already seen several success stories of AI in applications such as materials discovery, ecology, wildlife conservation, and molecule design optimization. This workshop aims to bring together researchers from AI and diverse science/engineering communities to achieve the following goals: 
 
 1) Identify and understand the challenges in applying AI to specific science and engineering problems.
@@ -1136,6 +1122,11 @@ gallery_item:
 
 
 
+  
+
+
+
+
   <p class="powered-by">
     
     
@@ -1155,7 +1146,74 @@ gallery_item:
     
   </div>
 
-  
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+
+      
+      
+
+      
+
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+    
+    <script id="page-data" type="application/json">{"use_headroom":false}</script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/en/js/wowchemy.min.0879156d664caf1dd0b240fa1b246a30.js"></script>
+
+    
+    
+    
+    
+    
+    
+      
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -1181,106 +1239,7 @@ gallery_item:
   </div>
 </div>
 
-      
-
-    
-    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
-
-    
-    
-    
-      
-      
-        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
-      
-
-      
-      
-
-      
-
-      
-        
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
-        
-        
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
-        
-      
-
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-      
-      <script id="search-hit-fuse-template" type="text/x-template">
-        <div class="search-hit" id="summary-{{key}}">
-          <div class="search-hit-content">
-            <div class="search-hit-name">
-              <a href="{{relpermalink}}">{{title}}</a>
-              <div class="article-metadata search-hit-type">{{type}}</div>
-              <p class="search-hit-description">{{snippet}}</p>
-            </div>
-          </div>
-        </div>
-      </script>
-      
-        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
-      
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-    
-      
-      
-      
-      
-      
-      
-      
-    
-
-    
-
-    
-    
-    
-    <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      
-      
-    
-    
-    <script src="/en/js/wowchemy.min.247fd8f54253895301106e3006f53f38.js"></script>
-
-    
+      <script src="/js/wowchemy-publication.ee00aa4e09ee62617fe2dc15bfcb3f7b.js" type="module"></script>
 
 
 
