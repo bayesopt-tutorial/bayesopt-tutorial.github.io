@@ -57,7 +57,7 @@
   
   
 
-  <meta name="author" content="Aryan Deshwal" />
+  <meta name="author" content="Jacob Gardner" />
 
   
   
@@ -448,36 +448,6 @@
           
           
             
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/tutorialspeakers"><span>Speakers</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
               
             
           
@@ -498,7 +468,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="https://aaai.org/Conferences/AAAI-22/" target="_blank" rel="noopener"><span>AAAI 2022</span></a>
+            <a class="nav-link " href="https://nips.cc/virtual/2022/tutorial/55806" target="_blank" rel="noopener"><span>Tutorial Video</span></a>
           </li>
 
           
@@ -575,174 +545,23 @@
 
 <div class="universal-wrapper">
   
-    <div class="article-style"><h1 id="outline-of-the-tutorial--combined-slidescombinedpdf">Outline of the Tutorial | <a href="combined.pdf">Combined slides</a></h1>
-<h3 id="0-big-picture-of-bayesian-optimization-bo--slides0bigpicturepdf">0. Big Picture of Bayesian Optimization (BO) | <a href="0bigpicture.pdf">Slides</a></h3>
+    <div class="article-style"><!-- # Outline of the Tutorial | [Combined slides](combined.pdf) -->
+<h3 id="part-i--slides0bigpictureintropdf">Part I | <a href="0bigpictureintro.pdf">Slides</a></h3>
 <ul>
-<li>Motivation from real-world applications</li>
-<li>Challenges of optimizing expensive black-box functions</li>
-<li>Overview of Bayesian optimization</li>
-<li>Three key elements: statistical model, acquisition function (AF), and acquisition function optimizer (AFO)</li>
+<li>Quick Overview of the BO Framework and GPs</li>
+<li>Summary of advances in GPs and Acquisition Functions</li>
+<li>Bayesian Optimization over Discrete/Hybrid Spaces</li>
 </ul>
-<h3 id="1-foundations-of-bo--slides1introductionbogpspdf">1. Foundations of BO | <a href="1introductionbogps.pdf">Slides</a></h3>
+<h3 id="part-ii--slides1highdimbopdf">Part II | <a href="1highdimbo.pdf">Slides</a></h3>
 <ul>
-<li>
-<p>Background on Gaussian Processes (GPs)</p>
+<li>High-Dimensional Bayesian Optimization</li>
+<li>BoTorch Hands-on Demonstration</li>
+</ul>
+<h3 id="part-iii--slides2tutorialcbopdf">Part III | <a href="2tutorialCBO.pdf">Slides</a></h3>
 <ul>
-<li>Two views of GPs: weight space and function space</li>
-<li>Learning and inference with GPs</li>
-<li>Scalability challenges and solutions</li>
+<li>Causal Bayesian Optimization</li>
+<li>Summary and Outstanding Challenges in BO</li>
 </ul>
-</li>
-<li>
-<p>Background on Acquisition Functions (AFs)</p>
-<ul>
-<li>Exploration vs. Exploitation trade-off</li>
-<li>Example AFs: Expected improvement (EI), Upper confidence bound (UCB), Thompson Sampling (TS), and Information-theoretic methods</li>
-<li>Optimizers: DIRECT, gradient-based methods, and evolutionary search</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-bo-over-combinatorial-spaces--slides2boovercombinatorialpdf">2. BO over Combinatorial Spaces | <a href="2boovercombinatorial.pdf">Slides</a></h3>
-<ul>
-<li>
-<p>Motivating Applications</p>
-<ul>
-<li>Manycore systems design</li>
-<li>Biological sequence design</li>
-<li>Drug/Vaccine/Molecule design</li>
-</ul>
-</li>
-<li>
-<p>Key Challenges</p>
-<ul>
-<li>Effective surrogate models for combinatorial structures (e.g., sequences, trees, graphs)</li>
-<li>Trading-off complexity of statistical model and tractability of AFO</li>
-</ul>
-</li>
-<li>
-<p>BO Methods over Original Space</p>
-<ul>
-<li>Simple models and tractable AFO</li>
-<li>Complex models and heuristic search</li>
-<li>Complex models and tractable search</li>
-<li>Complex models and effective search via learning-to-search</li>
-</ul>
-</li>
-<li>
-<p>BO Methods over Latent Continuous Space</p>
-<ul>
-<li>Advantages of reduction to BO over continuous space</li>
-<li>Deep generative models for learning latent space</li>
-<li>Challenges of BO over latent space: valid structures, high-dimensionality, imperfect decoder</li>
-<li>Recent algorithmic advances: weighted re-training, LADDER, and high-dimensional BO</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-bo-over-hybrid-spaces--slides3booverhybridpdf">3. BO over Hybrid Spaces | <a href="3booverhybrid.pdf">Slides</a></h3>
-<ul>
-<li>
-<p>Motivating Applications</p>
-<ul>
-<li>Material design</li>
-<li>Microbiome design</li>
-<li>Auto ML tasks</li>
-</ul>
-</li>
-<li>
-<p>Key Challenges</p>
-<ul>
-<li>Effective surrogate models for hybrid structures</li>
-<li>Trading-off complexity of statistical model and tractability of AFO</li>
-</ul>
-</li>
-<li>
-<p>BO Methods over Original Space</p>
-<ul>
-<li>Simple models and tractable AFO</li>
-<li>Complex models and heuristic search</li>
-</ul>
-</li>
-</ul>
-<h3 id="4-multi-fidelity-bo--slides4multifidelitypdf">4. Multi-fidelity BO | <a href="4multifidelity.pdf">Slides</a></h3>
-<ul>
-<li>
-<p>Background on Multi-fidelity optimization</p>
-<ul>
-<li>Function approximations (fidelities) with varying cost and accuracy of evaluation</li>
-<li>Discrete fidelity vs. Continuous fidelity</li>
-<li>Example real-world applications (e.g., Auto ML)</li>
-</ul>
-</li>
-<li>
-<p>Key Challenges</p>
-<ul>
-<li>Surrogate modeling of multiple fidelity functions and information sharing</li>
-<li>Selection of input and fidelity pair in each BO iteration</li>
-</ul>
-</li>
-<li>
-<p>BO Algorithms</p>
-<ul>
-<li>Simple and Information-theoretic methods</li>
-</ul>
-</li>
-</ul>
-<h3 id="5-constrained-bo--slides5constrainedbopdf">5. Constrained BO | <a href="5constrainedbo.pdf">Slides</a></h3>
-<ul>
-<li>
-<p>Background on Constrained Optimization</p>
-<ul>
-<li>Valid vs. Invalid inputs via constraints</li>
-<li>Black-box constraints</li>
-<li>Example real-world applications (e.g., design of safe and effective vaccines/drugs)</li>
-</ul>
-</li>
-<li>
-<p>Key Challenges</p>
-<ul>
-<li>Modeling black-box constraints</li>
-<li>Reasoning with learned model over constraints</li>
-</ul>
-</li>
-<li>
-<p>BO Algorithms</p>
-<ul>
-<li>Simple and Information-theoretic methods</li>
-</ul>
-</li>
-</ul>
-<h3 id="6-multi-objective-bo--slides6multiobjbopdf">6. Multi-objective BO | <a href="6multiobjbo.pdf">Slides</a></h3>
-<ul>
-<li>
-<p>Motivating Applications</p>
-<ul>
-<li>Hardware design to trade-off power and performance</li>
-<li>Drug/Vaccine design to trade-off efficacy, safety, and cost</li>
-</ul>
-</li>
-<li>
-<p>Background on Multi-Objective Optimization</p>
-<ul>
-<li>Optimal Pareto set</li>
-<li>Optimal Pareto front</li>
-</ul>
-</li>
-<li>
-<p>BO Algorithms</p>
-<ul>
-<li>Simple methods</li>
-<li>Information-theoretic methods</li>
-<li>Differentiable expected hypervolume improvement</li>
-</ul>
-</li>
-<li>
-<p>Multi-Fidelity BO Algorithms</p>
-</li>
-<li>
-<p>Constrained BO Algorithms</p>
-</li>
-</ul>
-<h3 id="7-outstanding-challenges-and-frontiers-of-bo--slides7futurebopdf">7. Outstanding Challenges and Frontiers of BO | <a href="7futurebo.pdf">Slides</a></h3>
 </div>
   
 
